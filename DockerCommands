@@ -1,0 +1,35 @@
+## To find installed docker version.
+> docker version
+
+## To view all configuration information.
+> docker info
+
+## To start a new container
+> docker container run --publish 8080:80 --name $randomName  --detach $imageName
+
+--publish		: it is used to publish this on 8080 host listening port and all traffic will be routed to port 80 of container.
+--name		: It is used to provide specific name to this container instead of auto-generated name.
+--detach		: It is used to run this container in background as a process.  
+
+## To view list of running containers
+> docker container ls
+
+## To stop a container.
+> docker container stop $containerId
+
+## To view list of all (including stopped) containers
+> docker container ls -a
+
+-a			: to view all containers.
+
+## To start a stopped container.
+> 
+
+## To view logs of a container
+> docker container logs $containerName
+
+## To remove multiple containers
+> docker container rm -f $containerId1 $containerId2 $containerId3
+
+-f			: to forcefully remove a running container.
+Note			: You cannot remove a running container.
