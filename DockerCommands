@@ -66,4 +66,4 @@ Note			: bash with -it will provide user a terminal inside a running container
 > docker container exec -it $conatinerName $commands
 
 ## To view configured port of a container
-> docker container port $containerName 
+> docker container port $containerName
