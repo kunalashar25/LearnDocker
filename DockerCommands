@@ -67,3 +67,18 @@ Note			: bash with -it will provide user a terminal inside a running container
 
 ## To view configured port of a container
 > docker container port $containerName
+
+## To view list of created networks
+> docker network ls
+
+## To view network configurations and list of containers running on a network
+> docker network inspect $networkName
+
+## To create a new network
+> docker network create $networkName
+
+## To connect container to a network
+> docker network connect $networkName $containerName
+
+## To disconnect container from a network
+> docker network disconnect $networkName $containerName
