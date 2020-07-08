@@ -34,6 +34,12 @@ Note			: You cannot remove a running container.
 ## To view list of processes running inside a container
 > docker container top $containerName
 
+## To see all running process on a system
+> ps aux
+
+## To set environment variables
+> docker container run -p 3306:3306 --name mysql -e MYSQL_RANDOM_ROOT_PASSWORD=yes -d mysql 
+
 ## To view metadata/config of a container
 > docker container inspect $containerName
 
@@ -46,7 +52,7 @@ Note			: this commands returns json array with all configuration details of spec
 > docker container stats $containerId
 
 ## To start a new interactive container
-> docker container run -it $conatinerName $commands
+> docker container run -it $containerName $commands
 
 -i			    : it is used to keep session open to receive user input
 -t			    : it is used to allocate new terminal(similar to SSH).
@@ -63,7 +69,7 @@ Note			: bash with -it will provide user a terminal inside a running container
 -i			    : it is used to keep session open to receive user input
 
 ## To run additional commands in existing(started) container
-> docker container exec -it $conatinerName $commands
+> docker container exec -it $containerName $commands
 
 ## To view configured port of a container
 > docker container port $containerName

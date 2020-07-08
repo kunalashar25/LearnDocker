@@ -1,0 +1,23 @@
+## Starting nginx on port 80
+docker container run -p 80:80 --name nginx -d nginx 
+
+## Starting httpd on port 8080
+docker container run -p 8080:80 --name httpd -d httpd 
+
+## Starting mysql with environment variable on port 3306
+docker container run -p 3306:3306 --name mysql -e MYSQL_RANDOM_ROOT_PASSWORD=yes -d mysql 
+
+## Fetching generated password by mysql
+docker container logs mysql | grep PASSWORD
+
+## Checking list of started containers
+docker container ls
+
+## Stopping containers
+docker container stop mysql httpd nginx
+
+## Removing containers
+docker container rm mysql nginx httpd
+
+## Verifying if removed successfully
+docker container ls -a
