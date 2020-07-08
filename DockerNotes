@@ -1,0 +1,21 @@
+## To find all docker commands
+- docker
+
+## docker commands syntax
+- docker <managementCommands> <subCommands> (options)
+
+## Image vs Container
+- Image is an application we want to run.
+- Container is an instance of that image running as a process.
+- We can have multiple containers with the same image.
+
+## docker container run --publish 80:80 nginx
+- Will download image from docker hub if not found locally.
+- Started new container from that image
+- Opened port 80 on the host IP
+- Routes the traffic to the container IP, port 80.
+- Will run it on the foreground
+
+## docker container run --publish 80:80 --detach nginx
+- Same as above but will run image in the background.
+- returns a unique container Id.
