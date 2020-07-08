@@ -1,0 +1,9 @@
+## To find installed docker version.
+> docker version
+
+## To view all configuration information.
+> docker info
+
+## To see all running process on a system
+> ps aux
+

@@ -28,3 +28,6 @@
 ## docker container run --publish 80:80 --detach nginx
 - Same as above but will run image in the background.
 - returns a unique container Id.
+
+## docker container inspect $containerName
+- Displays metadata of the container. (startup, config, volumes, network, etc)

@@ -1,0 +1,6 @@
+## To pull new image from docker hub
+> docker pull $imageName
+
+## To view all images
+> docker image ls
+
