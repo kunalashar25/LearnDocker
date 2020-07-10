@@ -12,3 +12,16 @@
 
 ## To disconnect container from a network
 > docker network disconnect $networkName $containerName
+
+## To list all networks
+> docker network ls
+
+## To check network configuration
+> docker network inspect $networkName
+
+## To create and build a new virtual network using inbuilt and third party drivers to  use virtual network features
+> docker network create --driver
+
+## To attach/detach a running container to a network
+> docker network connect $networkName $containerName
+> docker network disconnect $networkName $containerName

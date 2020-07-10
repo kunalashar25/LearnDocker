@@ -73,3 +73,6 @@ Note			: bash with -it will provide user a terminal inside a running container
 > docker container inspect --format '{{ .NetworkSettings.IPAddress}}' $containerName
 
 --format        : it is used to find value from the inspect and uses jsonPath to locate. Syntax: '{{jsonPath}}'
+
+## To attach and start container on a network
+docker container run -d --name $randomName --network $networkName $imageName

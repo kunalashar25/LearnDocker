@@ -52,3 +52,17 @@
 
 ## How network packets move around docker
 - refer network diagram 'dockerNetworkCommunication.png' or check video here: https://www.udemy.com/course/docker-mastery/learn/lecture/6758364?start=632#notes
+
+## host network
+- It is a special network that skips virtual network of the docker and attaches container directly to the host interface.
+- It gains performance by skipping virtual network but sacrifices security of the container modal.
+
+## none network
+- it is similar to having an interface on a computer but it is not attached to anything.
+
+## default security by docker network
+- create apps so frontend/backend sit on the same docker network
+- their inner communication never leaves host
+- all externally exposed ports are closed by default.
+- we can use -p to manually expose any port
+- this gets better with swarm and overlay network
