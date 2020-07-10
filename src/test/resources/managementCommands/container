@@ -5,6 +5,8 @@
 --name		    : It is used to provide specific name to this container instead of auto-generated name.
 --detach	    : It is used to run this container in background as a process.  
 
+Note            : -p and -d can be used instead of --publish and --detach
+
 ## To view list of running containers
 > docker container ls
 
