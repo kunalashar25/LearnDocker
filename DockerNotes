@@ -31,3 +31,24 @@
 
 ## docker container inspect $containerName
 - Displays metadata of the container. (startup, config, volumes, network, etc)
+
+## Docker Network defaults
+- each container is connected to a private virtual network named 'bridge' or 'docker0'
+- each virtual network routes through NAT firewall on host IP
+- all containers can talk to each other without -p
+- best practice is to create a new virtual network for each app:
+    - network 'my_web_app' for mysql and php/apache containers
+    - network 'my_api' for mongo and nodejs containers
+- 'Batteries Included, but Removable'
+    - defaults works well in many cases but it is easy to swap out parts to customize it.
+- make new virtual network
+- attach container to more than one virtual network (or none)
+- skip virtual network and use host IP (--net=host). We'll loose some of the container benefits but it might be required in some cases.
+- use different docker network drivers to gain new abilities.
+
+## docker container inspect --format '{{ .NetworkSettings.IPAddress}}' $containerName
+- this command is used to find the host IP address.
+- container host IP address is on different network (docker virtual network) when compared with local system. Hence, both IPs are different.
+
+## How network packets move around docker
+- refer network diagram 'dockerNetworkCommunication.png' or check video here: https://www.udemy.com/course/docker-mastery/learn/lecture/6758364?start=632#notes
